@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetas</title>
+    <style>
+        body {
+            font-family: "Times New Roman", sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('recipeImages/Background.png');
+            background-repeat: repeat;
+            background-size: 100px;
+            /*background-color: #f3f3f3;*/
+            color: #333;
+        }
+        header {
+            background-color: #ffbc36;
+            color: white;
+            padding: 0.2rem;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            padding: 2rem;
+            margin-top: 60px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 15rem;
+        }
+
+        /* Menu Desplegable */
+
+        .menuContainer {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .hamburgerMenu {
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hamburgerMenu .line {
+            width: 100%;
+            height: 5px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .dropdownMenu {
+            display: none;
+            position: absolute;
+            top: 11%; 
+            right: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            z-index: 1000; 
+        }
+
+        .dropdownMenu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+        }
+
+        .dropdownMenu a:hover {
+            background-color: #555;
+        }
+
+        /* Recipes */
+
+        .recipeContainer {
+            background-color: #ea6d6d;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: grid;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px; 
+        }
+
+        .recipeList {
+            grid-column: 1;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        ol li::marker {
+            color: #ffbc36; 
+            font-weight: bold;
+        }
+
+        li {
+            font-weight: bold;
+        }
+
+        h2.tag {
+            display: inline-block;
+            padding: 10px 20px; 
+            background-color: #ea6d6d; 
+            color: white; 
+            border-radius: 5px; 
+            font-size: 1.5rem; 
+        }
+
+        .recipeImage {
+            background-color: white;
+            border-radius: 15px;
+            grid-column: 2;
+            display: flex;
+            justify-content: center; 
+            align-items: center;  
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3); 
+        }
+
+        img {
+            max-width: 70%;
+            height: auto;   
+        }
+
+        /* Movil */
+
+        @media (max-width: 768px) { 
+            header {
+                padding: 0.5rem 1.5rem;
+                line-height: 1;
+                text-align: left;
+                font-size: 1.5rem; 
+            }
+            .recipeContainer {
+                grid-template-columns: 1fr; 
+                grid-template-rows: auto auto; 
+                gap: 10px;
+            }
+
+            .recipeTittleTag {
+                font-size: 1.5rem; 
+                margin-bottom: 10px;
+            }
+
+            .recipeList,
+            .recipeImage {
+                grid-column: 1; 
+                box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2); 
+            }
+
+            .recipeImage img {
+                max-width: 80%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><b>NUESTRAS RESETAS 🍱 </b></h1>
+        <!-- Menu hamburguesa -->
+        <div class="menuContainer">
+            <div class="hamburgerMenu" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu desplegable -->
+    <div id="menu" class="dropdownMenu">
+        <a href="#Croquetas">Croquetas</a>
+        <a href="#Milanesa">Milanesa</a>
+    </div>
+
+    <main>
+        <div>
+            <h2 class="tag" id="Croquetas"><b>Croquetas</b></h2>
+            <div class="recipeContainer">
+                <div class="recipeList">
+                    <ol>
+                        <li>Hervir el arroz y papa</li>
+                        <li>Picar morrón (rojo, verde) y perejil</li>
+                        <li>Romper dos huevos en un recipiente y batir</li>
+                        <li>Colar el arroz y papa</li>
+                        <li>Mezclar el arroz, papa, morrón y perejil en el recipiente con el huevo</li>
+                        <li>Volcar pan rallado en un plato</li>
+                        <li>Moldear la mezcla con las manos, y empanizar</li>
+                        <li>Al tener varias forzadas, freír</li>
+                    </ol>
+                </div>
+                <div class="recipeImage">
+                    <img src="recipeImages/croquetas.png" alt="food"/>
+                </div>
+            </div>
+
+            <h2 class="tag" id="Milanesa"><b>Milanesa</b></h2>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 19/11/2024 - Propiedad de Micaela e Ismael.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
