@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Great+Vibes&family=Allura&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <title>Index</title>
+    <style>
+        body {
+            font-family: "Times New Roman", sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('recipeImages/Background.png');
+            background-repeat: repeat;
+            background-size: 100px;
+            color: #333;
+        }
+
+        .title-container {
+            background-color:  #ea6d6d;
+            padding: 80px 30px; 
+            border-radius: 20px; 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
+            margin: 30px auto; 
+            max-width: 90%; 
+            text-align: center; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 15rem;
+        }
+
+        h1 {
+            margin: 0;
+            color: white; 
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 6rem;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 0;
+            color: white; 
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center; 
+            margin: 10px 0; 
+        }
+
+        .button-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 10px; 
+            background-color: #ffbc36; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button-item img {
+            width: 80px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .button-item span {
+            font-size: 1.5rem;
+            font-family: 'Times New Roman', Times, serif;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+
+        .button-item:hover {
+            background-color: #ea6d6d; 
+            transform: scale(1.05); 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive: Pantallas pequeñas */
+        @media (max-width: 768px) { 
+
+            .title-container {
+                margin: 0; 
+                border-radius: 0;
+                padding: 60px 20px; 
+                max-width: 100%; 
+            }
+
+            h1 {
+                font-size: 3rem;
+                line-height: 1.2;
+                word-spacing: -2px; 
+            }
+
+            .buttons-container {
+                justify-content: center;
+                flex-direction: column; 
+                gap: 10px;
+            }
+
+            .button-item {
+                width: 80%;
+            }
+
+            .footer {
+                margin-top: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="title-container">
+            <h1>Nuestra Comida</h1>
+            <h2>Recuerdos que cocinamos con cada receta</h2>
+        </div>
+        <div class="buttons-container">
+            <div class="button-item" onclick="window.location.href='Recetas.html'">
+                <img src="icons/recipesIcon.png" alt="Recetas Icon">
+                <span>Ver Recetas</span>
+            </div>
+            <div class="button-item" onclick="window.location.href='Historia.html'">
+                <img src="icons/historyIcon.png" alt="Historia Icon">
+                <span>Ver Historia</span>
+            </div>
+        </div>
+    </main> 
+    <footer>
+        <p>&copy; 19/11/2024 - Propiedad de Micaela e Ismael.</p>
+    </footer>
+</body>
+</html>

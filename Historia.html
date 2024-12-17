@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia</title>
+    <style>
+        body {
+            font-family: "Times New Roman", sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('recipeImages/Background.png');
+            background-repeat: repeat;
+            background-size: 100px;
+            color: #333;
+        }
+
+        main {
+            padding: 2rem;
+            margin-top: 60px;
+        }
+
+        header {
+            background-color: #ffbc36;
+            color: white;
+            padding: 0.2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .memoryContainer {
+            background-color: #ea6d6d;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: grid;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px; 
+            margin-bottom: 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .memoryText {
+            grid-column: 1/4;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .memoryImage {
+            background-color: #333;
+            border-radius: 15px;
+            grid-column: auto;
+            display: flex;
+            justify-content: center; 
+            align-items: center;  
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3); 
+        }
+
+        .memoryImage img {
+            max-width: 100%; 
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h2.tag {
+            display: inline-block;
+            padding: 10px 20px; 
+            background-color: #ea6d6d; 
+            color: white; 
+            border-radius: 5px; 
+            font-size: 1.5rem; 
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 15rem;
+        }
+        /* Responsive: Pantallas pequeñas */
+        @media (max-width: 768px) {
+            header {
+                padding: 0.5rem 1.5rem;
+                line-height: 1;
+                text-align: left;
+                font-size: 1.5rem; 
+            } 
+            .memoryImage img {
+                max-width: 80%; 
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 onclick="window.location.href='Index.html'"><b>NUESTROS RECUERDOS 🍴 </b></h1>
+    </header>
+    <main>
+    </main>
+        <h2 class="tag" id="01"><b>02/2022 - Sushi Vegano - La primera vez que cocinamos juntos 😋</b></h2>
+        <div class="memoryContainer">
+            <div class="memoryImage">
+                <img src="memoryImages/01_01.jpeg" alt="memo"/>
+            </div>
+            <div class="memoryImage">
+                <img src="memoryImages/01_02.jpg" alt="memo"/>
+            </div>
+            <div class="memoryImage">
+                <img src="memoryImages/01_03.jpg" alt="memo"/>
+            </div>
+            <div class="memoryImage">
+                <img src="memoryImages/01_04.jpg" alt="memo"/>
+            </div>
+            <div class="memoryImage">
+                <img src="memoryImages/01_05.jpg" alt="memo"/>
+            </div>
+            <div class="memoryImage">
+                <img src="memoryImages/01_05.jpg" alt="memo"/>
+            </div>
+        </div>
+        
+        <h2 class="tag" id="02"><b>03/2024 - Omurice - El día que hicimos medio kilo de arroz JAJA 🤣</b></h2>
+        <div class="memoryContainer">
+            <div class="memoryImage">
+                <img src="memoryImages/02_01.jpg" alt="memo"/>
+            </div>
+            <div class="memoryImage">
+                <img src="memoryImages/02_02.jpg" alt="memo"/>
+            </div>
+            <div class="memoryImage">
+                <img src="memoryImages/02_03.jpg" alt="memo"/>
+            </div>
+            <div class="memoryImage">
+                <img src="memoryImages/02_04.jpg" alt="memo"/>
+            </div>
+            <div class="memoryImage">
+                <img src="memoryImages/02_05.jpg" alt="memo"/>
+            </div>
+            <div class="memoryImage">
+                <img src="memoryImages/02_05.jpg" alt="memo"/>
+            </div>
+        </div> 
+    <footer>
+        <p>&copy; 19/11/2024 - Propiedad de Micaela e Ismael.</p>
+    </footer>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resetas</title>
+    <title>Recetas</title>
     <style>
         body {
             font-family: "Times New Roman", sans-serif;
@@ -109,6 +109,26 @@
             box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
+        .ingredientsList {
+            display: flex;
+            gap: 10px; 
+            justify-content: center; 
+            padding: 0;
+            margin: 10px 0; 
+            list-style: none; 
+        }
+
+        .ingredientsList li {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            background-color: #ffbc36; 
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+        }
+
         ol li::marker {
             color: #ffbc36; 
             font-weight: bold;
@@ -162,6 +182,18 @@
                 margin-bottom: 10px;
             }
 
+            .ingredientsList {
+                flex-wrap: wrap; 
+                gap: 5px; 
+                justify-content: center; 
+            }
+
+            .ingredientsList li {
+                font-size: 0.9rem;
+                padding: 5px; 
+                box-shadow: none; 
+            }
+
             .recipeList,
             .recipeImage {
                 grid-column: 1; 
@@ -176,8 +208,8 @@
 </head>
 <body>
     <header>
-        <h1><b>NUESTRAS RECETAS 🍱 </b></h1>
-        <!-- Menu hamburguesa -->
+        <h1 onclick="window.location.href='Index.html'"><b>NUESTRAS RECETAS 🍱 </b></h1>
+    <!-- Menu hamburguesa -->
         <div class="menuContainer">
             <div class="hamburgerMenu" onclick="toggleMenu()">
                 <div class="line"></div>
@@ -192,9 +224,18 @@
         <a href="#Milanesa">Milanesa</a>
     </div>
 
+    <!-- Resetas -->
     <main>
         <div>
             <h2 class="tag" id="Croquetas"><b>Croquetas</b></h2>
+                <ul class="ingredientsList">
+                    <li>🍚 Arroz</li>
+                    <li>🥔 Papa</li>
+                    <li>🌶️ Morrón</li>
+                    <li>🌿 Perejil</li>
+                    <li>🥚 Huevos</li>
+                    <li>🍞 Pan rallado</li>
+                </ul>
             <div class="recipeContainer">
                 <div class="recipeList">
                     <ol>
@@ -214,6 +255,16 @@
             </div>
 
             <h2 class="tag" id="Milanesa"><b>Milanesa</b></h2>
+                <ul class="ingredientsList">
+                    <li>🥩 Carne</li>
+                    <li>🥚 Huevos</li>
+                    <li>🍞 Pan rallado</li>
+                </ul>
+            <div class="recipeContainer">
+                <div class="recipeList">
+                    <ol>
+                    </ol>
+                </div>
         </div>
     </main>
 
